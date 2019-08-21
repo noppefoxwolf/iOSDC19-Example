@@ -1,0 +1,37 @@
+PODS:
+  - AR2DFaceDetector (0.1.0)
+  - SkinSmoothingFilter (0.1.0)
+  - WarpGeometryFilter (0.1.0)
+
+DEPENDENCIES:
+  - "AR2DFaceDetector (from `git@github.com:noppefoxwolf/AR2DFaceDetector.git`)"
+  - "SkinSmoothingFilter (from `git@github.com:noppefoxwolf/SkinSmoothingFilter.git`)"
+  - "WarpGeometryFilter (from `git@github.com:noppefoxwolf/WarpGeometryFilter.git`)"
+
+EXTERNAL SOURCES:
+  AR2DFaceDetector:
+    :git: "git@github.com:noppefoxwolf/AR2DFaceDetector.git"
+  SkinSmoothingFilter:
+    :git: "git@github.com:noppefoxwolf/SkinSmoothingFilter.git"
+  WarpGeometryFilter:
+    :git: "git@github.com:noppefoxwolf/WarpGeometryFilter.git"
+
+CHECKOUT OPTIONS:
+  AR2DFaceDetector:
+    :commit: 5e8b9accf44584cf9ad6b3cde721a15027a597ff
+    :git: "git@github.com:noppefoxwolf/AR2DFaceDetector.git"
+  SkinSmoothingFilter:
+    :commit: 40189b736966209e803f1e8c77d73d8a23b62992
+    :git: "git@github.com:noppefoxwolf/SkinSmoothingFilter.git"
+  WarpGeometryFilter:
+    :commit: 784fad1afbcf3c446b5bd60c7037ab9e15f7a2fe
+    :git: "git@github.com:noppefoxwolf/WarpGeometryFilter.git"
+
+SPEC CHECKSUMS:
+  AR2DFaceDetector: df88780e4ccf4aa04f252a458bff71a23eb2994e
+  SkinSmoothingFilter: 7012b19636f91047bee4098fcdabd5990d1fe07f
+  WarpGeometryFilter: 6c89c3a4be74c59fe54915c7fcbf77f4ba31ffed
+
+PODFILE CHECKSUM: 8df85deef7e13cefe3a06a9ffd735a8b140e322e
+
+COCOAPODS: 1.8.0.beta.1
