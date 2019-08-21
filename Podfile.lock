@@ -24,7 +24,7 @@ CHECKOUT OPTIONS:
     :commit: 40189b736966209e803f1e8c77d73d8a23b62992
     :git: "git@github.com:noppefoxwolf/SkinSmoothingFilter.git"
   WarpGeometryFilter:
-    :commit: 784fad1afbcf3c446b5bd60c7037ab9e15f7a2fe
+    :commit: 1eec0dd1eac5050dd64f99f479769f5bc85e5ec4
     :git: "git@github.com:noppefoxwolf/WarpGeometryFilter.git"
 
 SPEC CHECKSUMS:
