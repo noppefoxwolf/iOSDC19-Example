@@ -16,6 +16,7 @@ class SmartViewController: UIViewController {
   let session: ARSession = .init()
   let imageView: UIImageView = .init()
   let toggle: UISwitch = .init()
+  
   let filter: SmartFilter = .init()
   let context = CIContext()
   
@@ -48,6 +49,7 @@ class SmartViewController: UIViewController {
     super.viewDidLoad()
     session.delegate = self
     let configuration = ARFaceTrackingConfiguration()
+    configuration.videoFormat = ARFaceTrackingConfiguration.supportedVideoFormats.last!
     session.run(configuration)
   }
 }
@@ -57,11 +59,26 @@ extension SmartViewController: ARSessionDelegate {
     let inputImage = CIImage(cvImageBuffer: frame.capturedImage).oriented(.right)
     let detector = AR2DFaceDetector(frame: frame, orientation: .right)
     if let perspectivePoints = detector.faces.first?.perspectivePoints, toggle.isOn {
+      
+      // Background thread sample
+//      DispatchQueue.global(qos: .default).async {
+//        let filter: SmartFilter = .init()
+//        let context = CIContext()
+//        filter.inputImage = inputImage
+//        filter.perspectivePoints = perspectivePoints
+//        DispatchQueue.main.async {
+//          let outputImage: CIImage = filter.outputImage!
+//          let cgImage = context.createCGImage(outputImage, from: outputImage.extent)!
+//          self.imageView.image = UIImage(cgImage: cgImage)
+//        }
+//      }
+      
       filter.inputImage = inputImage
       filter.perspectivePoints = perspectivePoints
       let outputImage: CIImage = filter.outputImage!
       let cgImage = context.createCGImage(outputImage, from: outputImage.extent)!
-      imageView.image = UIImage(cgImage: cgImage)
+      self.imageView.image = UIImage(cgImage: cgImage)
+      
     } else {
       let context = CIContext()
       let cgImage = context.createCGImage(inputImage, from: inputImage.extent)!
