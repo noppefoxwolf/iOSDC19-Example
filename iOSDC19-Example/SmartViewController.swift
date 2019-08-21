@@ -120,7 +120,7 @@ class SmartFilter: CIFilter {
         .init(0.00, 1.00), .init(0.10, 1.00), .init(0.90, 1.00), .init(1.00, 1.00),
       ]
       
-      let horizontalDestinationPositions: [SIMD2<Float>] = [
+      let destinationPositions: [SIMD2<Float>] = [
         .init(0.00, 0.00), .init(0.10, 0.00), .init(0.90, 0.00), .init(1.00, 0.00),
         .init(0.00, 0.25), .init(0.13, 0.25), .init(0.87, 0.25), .init(1.00, 0.25),
         .init(0.00, 0.55), .init(0.10, 0.55), .init(0.90, 0.55), .init(1.00, 0.55),
@@ -128,7 +128,7 @@ class SmartFilter: CIFilter {
       ]
       let warpGeometry = SKWarpGeometryGrid(columns: 3, rows: 3,
                                             sourcePositions: sourcePositions,
-                                            destinationPositions: horizontalDestinationPositions)
+                                            destinationPositions: destinationPositions)
       warpGeometryFilter.setValue(perspectiveCorrectionOutput, forKey: kCIInputImageKey)
       warpGeometryFilter.setValue(warpGeometry, forKey: kCIInputWarpGeometryKey)
       warpGeometryOutput = warpGeometryFilter.outputImage!
