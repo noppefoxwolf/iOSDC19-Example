@@ -16,6 +16,7 @@ class StickerViewController: UIViewController {
   
   override func loadView() {
     super.loadView()
+    imageView.contentMode = .scaleAspectFill
     if #available(iOS 13.0, *) {
       view.backgroundColor = .systemBackground
     } else {
@@ -61,10 +62,15 @@ class StickerFilter: CIFilter {
   
   override var outputImage: CIImage? {
     guard let inputImage = inputImage else { return self.inputImage }
-    guard let inputStickerImage = inputStickerImage else { return inputImage }
+    guard let inputStickerImage = inputStickerImage else { return inputImage } //750x1334
     guard let faceLandmarkRegion = faceLandmarkRegion else { return inputImage }
     let translateMatrix = faceLandmarkRegion.pointsInImage(imageSize: inputImage.extent.size)[0].simd - inputImage.extent.size.center.simd
-    let transform: CGAffineTransform = CGAffineTransform(translationX: CGFloat(translateMatrix.x), y: -CGFloat(translateMatrix.y)).translatedBy(x: 200/2, y: 300/2)
+    let transform: CGAffineTransform = CGAffineTransform.identity
+        .translatedBy(x: CGFloat(translateMatrix.x), y: -CGFloat(translateMatrix.y))
+        .scaledBy(x: 0.5, y: 0.5)
+        .translatedBy(x: inputStickerImage.extent.width / 2, y: inputStickerImage.extent.height / 2)
+        .translatedBy(x: 0, y: -30)
+        
     let transformedStickerImage = inputStickerImage.transformed(by: transform)
     return transformedStickerImage.composited(over: inputImage).cropped(to: inputImage.extent)
   }

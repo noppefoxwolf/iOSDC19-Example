@@ -13,6 +13,10 @@
 		CD742B39230D4E8F0086B123 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD742B37230D4E8F0086B123 /* Main.storyboard */; };
 		CD742B3B230D4E920086B123 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD742B3A230D4E920086B123 /* Assets.xcassets */; };
 		CD742B3E230D4E920086B123 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD742B3C230D4E920086B123 /* LaunchScreen.storyboard */; };
+		CD8AB840231EF29300894299 /* CIDetectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8AB83F231EF29300894299 /* CIDetectorViewController.swift */; };
+		CD8AB842231EF68D00894299 /* VNViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8AB841231EF68D00894299 /* VNViewController.swift */; };
+		CD8AB844231F665700894299 /* ARKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8AB843231F665700894299 /* ARKitViewController.swift */; };
+		CD8AB846232067B800894299 /* MaskImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8AB845232067B800894299 /* MaskImageViewController.swift */; };
 		CD8D36FA230D5ECE00C77D4F /* StickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8D36F9230D5ECE00C77D4F /* StickerViewController.swift */; };
 		CD8D36FC230D717000C77D4F /* CGPoint+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8D36FB230D717000C77D4F /* CGPoint+Extensions.swift */; };
 		CD8D36FE230DA9C800C77D4F /* SmoothViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8D36FD230DA9C800C77D4F /* SmoothViewController.swift */; };
@@ -29,6 +33,10 @@
 		CD742B3A230D4E920086B123 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD742B3D230D4E920086B123 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD742B3F230D4E920086B123 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD8AB83F231EF29300894299 /* CIDetectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CIDetectorViewController.swift; sourceTree = "<group>"; };
+		CD8AB841231EF68D00894299 /* VNViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VNViewController.swift; sourceTree = "<group>"; };
+		CD8AB843231F665700894299 /* ARKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARKitViewController.swift; sourceTree = "<group>"; };
+		CD8AB845232067B800894299 /* MaskImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskImageViewController.swift; sourceTree = "<group>"; };
 		CD8D36F9230D5ECE00C77D4F /* StickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerViewController.swift; sourceTree = "<group>"; };
 		CD8D36FB230D717000C77D4F /* CGPoint+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Extensions.swift"; sourceTree = "<group>"; };
 		CD8D36FD230DA9C800C77D4F /* SmoothViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmoothViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +104,10 @@
 				CD8D36FB230D717000C77D4F /* CGPoint+Extensions.swift */,
 				CD8D36FD230DA9C800C77D4F /* SmoothViewController.swift */,
 				CD8D36FF230DADBB00C77D4F /* SmartViewController.swift */,
+				CD8AB83F231EF29300894299 /* CIDetectorViewController.swift */,
+				CD8AB841231EF68D00894299 /* VNViewController.swift */,
+				CD8AB843231F665700894299 /* ARKitViewController.swift */,
+				CD8AB845232067B800894299 /* MaskImageViewController.swift */,
 			);
 			path = "iOSDC19-Example";
 			sourceTree = "<group>";
@@ -216,8 +228,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD8D36FA230D5ECE00C77D4F /* StickerViewController.swift in Sources */,
+				CD8AB840231EF29300894299 /* CIDetectorViewController.swift in Sources */,
+				CD8AB846232067B800894299 /* MaskImageViewController.swift in Sources */,
+				CD8AB844231F665700894299 /* ARKitViewController.swift in Sources */,
 				CD8D36FE230DA9C800C77D4F /* SmoothViewController.swift in Sources */,
 				CD742B36230D4E8F0086B123 /* ViewController.swift in Sources */,
+				CD8AB842231EF68D00894299 /* VNViewController.swift in Sources */,
 				CD8D36FC230D717000C77D4F /* CGPoint+Extensions.swift in Sources */,
 				CD8D3700230DADBB00C77D4F /* SmartViewController.swift in Sources */,
 				CD742B34230D4E8F0086B123 /* AppDelegate.swift in Sources */,

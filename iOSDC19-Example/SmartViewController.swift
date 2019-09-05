@@ -36,7 +36,7 @@ class SmartViewController: UIViewController {
       imageView.rightAnchor.constraint(equalTo: view.rightAnchor),
       imageView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
     ])
-    toggle.isOn = true
+    toggle.isOn = false
     toggle.translatesAutoresizingMaskIntoConstraints = false
     view.addSubview(toggle)
     NSLayoutConstraint.activate([

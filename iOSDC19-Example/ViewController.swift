@@ -17,6 +17,10 @@ class ViewController: UIViewController {
     case sticker
     case smooth
     case smart
+    case cidetector
+    case vision
+    case arkit
+    case semantics
   }
   
   @IBOutlet private weak var tableView: UITableView! {
@@ -42,16 +46,29 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     switch Scene(rawValue: indexPath.row) {
     case .some(.sticker):
-      let vc = StickerViewController()
-      present(vc, animated: true, completion: nil)
+        let vc = StickerViewController()
+        present(vc, animated: true, completion: nil)
     case .some(.smooth):
-      let vc = SmoothViewController()
-      present(vc, animated: true, completion: nil)
+        let vc = SmoothViewController()
+        present(vc, animated: true, completion: nil)
     case .smart:
-      let vc = SmartViewController()
-      present(vc, animated: true, completion: nil)
+        let vc = SmartViewController()
+        present(vc, animated: true, completion: nil)
+    case .cidetector:
+        let vc = CIDetectorViewController()
+        present(vc, animated: true, completion: nil)
+    case .vision:
+        let vc = VNViewController()
+        present(vc, animated: true, completion: nil)
+    case .arkit:
+        let vc = ARKitViewController()
+        present(vc, animated: true, completion: nil)
+    case .semantics:
+        let vc = MaskImageViewController()
+        present(vc, animated: true, completion: nil)
     default: break
     }
   }
 }
+
 
